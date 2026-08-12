@@ -1,21 +1,19 @@
 <!--
   Sync Impact Report
   ==================
-  Version change: N/A (template) → 1.0.0
-  Modified principles: N/A (initial ratification)
-  Added sections:
-    - Core Principles (5 principles)
-    - Architecture Constraints
-    - Development Workflow
-    - Governance
+  Version change: 1.0.0 → 1.0.1
+  Modified principles: None (wording clarification only)
+  Added sections: None
   Removed sections: None
+  Updated lines:
+    - Architecture Constraints / Naming conventions (line 132):
+      old: "MUST follow the documented patterns in CLAUDE.md."
+      new: "MUST follow the documented patterns in the project's
+            agent context files (AGENTS.md, GEMINI.md, CLAUDE.md)."
   Templates requiring updates:
-    - .specify/templates/plan-template.md — ✅ aligned
-      (Constitution Check section already generic; principles map to gates)
-    - .specify/templates/spec-template.md — ✅ aligned
-      (Requirements and success criteria compatible with principles)
-    - .specify/templates/tasks-template.md — ✅ aligned
-      (Phase structure supports layer-ordered implementation)
+    - .specify/templates/plan-template.md — ✅ no CLAUDE.md refs
+    - .specify/templates/spec-template.md — ✅ no CLAUDE.md refs
+    - .specify/templates/tasks-template.md — ✅ no CLAUDE.md refs
   Follow-up TODOs: None
 -->
 
@@ -129,7 +127,8 @@ visible, testable, and reconfigurable without code changes.
 - **Naming conventions.** Files use `snake_case`, classes use
   `PascalCase`, methods/variables use `camelCase`. Suffixes
   (`Model`, `Impl`, `Bloc`, `Screen`, `Failure`, `Exception`)
-  MUST follow the documented patterns in CLAUDE.md.
+  MUST follow the documented patterns in the project's agent
+  context files (AGENTS.md, GEMINI.md, CLAUDE.md).
 
 ## Development Workflow
 
@@ -178,4 +177,4 @@ ad-hoc decisions or undocumented conventions.
 - Code reviews MUST verify compliance with layer boundaries,
   error handling flow, and naming conventions.
 
-**Version**: 1.0.0 | **Ratified**: 2026-04-07 | **Last Amended**: 2026-04-07
+**Version**: 1.0.1 | **Ratified**: 2026-04-07 | **Last Amended**: 2026-08-12

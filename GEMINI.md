@@ -39,3 +39,8 @@ Whenever adding features or modifying behavior inside `lib/features/`, you must 
 3. **Handle Errors strictly**: Never throw exceptions in UI or Domain layers. Convert to `Failure` types using `dartz` in the data layer implementation. 
 4. **Follow conventions**: camelCase variables, PascalCase classes, snake_case for file names and folder structures. Follow Flutter's trailing comma patterns.
 5. **Testing First**: Provide extensive tests utilizing `mocktail` referencing matching files inside the `test/` directory.
+
+<!-- SPECKIT START -->
+For additional context about technologies to be used, project structure,
+shell commands, and other important information, read the current plan
+<!-- SPECKIT END -->

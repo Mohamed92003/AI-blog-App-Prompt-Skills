@@ -32,3 +32,8 @@ Any code generated or refactored within `lib/features/` MUST strictly observe a 
 5. **Testing Mandate**: Supply unit tests bridging changes; favor `bloc_test` for states and `mocktail` for dependency isolation inside `test/`.
 
 *If your underlying LLM model is Claude, refer to `CLAUDE.md`. If your underlying LLM is Gemini, refer to `GEMINI.md`.*
+
+<!-- SPECKIT START -->
+For additional context about technologies to be used, project structure,
+shell commands, and other important information, read the current plan
+<!-- SPECKIT END -->
