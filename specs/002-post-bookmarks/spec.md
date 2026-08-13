@@ -60,7 +60,7 @@ As an unauthenticated (guest) user attempting to bookmark a post, I want to be p
 
 **Acceptance Scenarios**:
 
-1. **Given** an unauthenticated guest user viewing a blog post, **When** tapping the bookmark button, **Then** a login prompt modal or banner appears explaining that bookmarking requires an account.
+1. **Given** an unauthenticated guest user viewing a blog post, **When** tapping the bookmark button, **Then** a login prompt dialog modal appears explaining that bookmarking requires an account.
 2. **Given** a guest user who signs in after seeing the prompt, **When** authentication completes, **Then** the user is returned to the post with bookmark functionality enabled.
 
 ---
@@ -80,7 +80,7 @@ As an unauthenticated (guest) user attempting to bookmark a post, I want to be p
 - **FR-003**: System MUST provide a dedicated Bookmarks screen listing all posts saved by the currently authenticated user.
 - **FR-004**: System MUST display saved posts in reverse chronological order (most recently bookmarked first).
 - **FR-005**: System MUST display a clear empty state message when the user has no bookmarked posts.
-- **FR-006**: System MUST prompt unauthenticated users to log in or sign up when attempting to use the bookmark feature.
+- **FR-006**: System MUST prompt unauthenticated users to log in or sign up via a dialog modal when attempting to use the bookmark feature.
 - **FR-007**: System MUST provide real-time or immediate UI updates when bookmark status changes without full page reload.
 - **FR-008**: System MUST operate using an online-first architecture (direct Supabase queries) and display an informative error state with a retry option when network connectivity is unavailable.
 - **FR-009**: System MUST perform optimistic UI updates upon bookmark toggle actions, instantly updating visual state and performing automatic state rollback with an error notification if the server sync fails.

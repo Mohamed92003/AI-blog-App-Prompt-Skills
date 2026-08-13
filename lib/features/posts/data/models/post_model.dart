@@ -6,6 +6,7 @@ class PostModel {
   final String content;
   final String authorId;
   final DateTime createdAt;
+  final bool isBookmarked;
 
   const PostModel({
     required this.id,
@@ -13,6 +14,7 @@ class PostModel {
     required this.content,
     required this.authorId,
     required this.createdAt,
+    this.isBookmarked = false,
   });
 
   factory PostModel.fromJson(Map<String, dynamic> json) {
@@ -22,6 +24,7 @@ class PostModel {
       content: json['content'] as String,
       authorId: json['author_id'] as String,
       createdAt: DateTime.parse(json['created_at'] as String),
+      isBookmarked: json['is_bookmarked'] as bool? ?? false,
     );
   }
 
@@ -29,6 +32,7 @@ class PostModel {
         'title': title,
         'content': content,
         'author_id': authorId,
+        'is_bookmarked': isBookmarked,
       };
 
   Post toEntity() => Post(
@@ -37,5 +41,6 @@ class PostModel {
         content: content,
         authorId: authorId,
         createdAt: createdAt,
+        isBookmarked: isBookmarked,
       );
 }

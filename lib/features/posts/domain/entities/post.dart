@@ -4,6 +4,7 @@ class Post {
   final String content;
   final String authorId;
   final DateTime createdAt;
+  final bool isBookmarked;
 
   const Post({
     required this.id,
@@ -11,5 +12,6 @@ class Post {
     required this.content,
     required this.authorId,
     required this.createdAt,
+    this.isBookmarked = false,
   });
 }

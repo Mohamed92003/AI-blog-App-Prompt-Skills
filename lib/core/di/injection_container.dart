@@ -10,6 +10,8 @@ import '../../features/bookmarks/domain/usecases/get_bookmarks.dart';
 import '../../features/bookmarks/presentation/bloc/bookmark_toggle_bloc.dart';
 import '../../features/bookmarks/presentation/bloc/bookmarks_bloc.dart';
 
+// Post Bookmarks Feature Imports
+
 final sl = GetIt.instance;
 
 void initDependencies() {
@@ -40,4 +42,32 @@ void initDependencies() {
   sl.registerFactory(
     () => BookmarksBloc(getBookmarks: sl<GetBookmarks>()),
   );
+
+  // --- Post Bookmarks Feature (Clean Architecture) ---
+
+  // Data Sources (Assuming implementations exist elsewhere or mock them)
+  // sl.registerLazySingleton<BookmarkLocalDataSource>(() => BookmarkLocalDataSourceImpl());
+  // sl.registerLazySingleton<BookmarkRemoteDataSource>(() => BookmarkRemoteDataSourceImpl(supabaseClient));
+
+  // Repository
+  /* 
+  sl.registerLazySingleton<BookmarkRepository>(
+    () => BookmarkRepositoryImpl(
+      remoteDataSource: sl<BookmarkRemoteDataSource>(),
+      localDataSource: sl<BookmarkLocalDataSource>(),
+    ),
+  );
+  */
+
+  // Use Cases
+  /*
+  sl.registerLazySingleton(() => ToggleBookmarkUseCase(sl<BookmarkRepository>()));
+  sl.registerLazySingleton(() => GetBookmarkedPostsUseCase(sl<BookmarkRepository>()));
+  */
+
+  // BLoCs
+  /*
+  sl.registerFactory(() => BookmarkBloc(toggleBookmarkUseCase: sl<ToggleBookmarkUseCase>()));
+  sl.registerFactory(() => BookmarkListBloc(getBookmarkedPostsUseCase: sl<GetBookmarkedPostsUseCase>()));
+  */
 }
